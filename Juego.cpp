@@ -28,9 +28,9 @@ juego::juego(int width, int height, std::string title)
 
 	Event1 = new Event; 
 
-	Mario = new RectangleShape({ 30,50 });
+	Mario = new RectangleShape({ 20,30 });
 	Mario->setFillColor(Color::Magenta);
-	Mario->setPosition(185, 870);
+	Mario->setPosition(185, 850);
 
 	Wall1 = new RectangleShape({ 45,900 });
 	Wall1->setFillColor(Color::Red);
@@ -364,11 +364,11 @@ void juego::eventProcess()
 			}
 			else if (Keyboard::isKeyPressed(Keyboard::Right))
 			{
-				Mario->setPosition(Mario->getPosition().x + 10, Mario->getPosition().y - 85);
+				Mario->setPosition(Mario->getPosition().x + 30, Mario->getPosition().y - 35);
 			}
 			else if (Keyboard::isKeyPressed(Keyboard::Left))
 			{
-				Mario->setPosition(Mario->getPosition().x - 10, Mario->getPosition().y - 85);
+				Mario->setPosition(Mario->getPosition().x - 30, Mario->getPosition().y - 35);
 			}
 
 		break;
@@ -398,259 +398,260 @@ void juego::colliderProcess()
 
 	if (Mario->getGlobalBounds().intersects(Barrel1->getGlobalBounds()))
 	{
-		Barrel1->rotate(3);
+		Barrel1->setPosition(150, 310);
+		Mario->setPosition(185, 850);
 	}
 
 	if (Mario->getGlobalBounds().intersects(Box1->getGlobalBounds())) //1
 	{
-		Mario->setPosition(Mario->getPosition().x, 820);
+		Mario->setPosition(Mario->getPosition().x, 840);
 	}
 
 	if (Mario->getGlobalBounds().intersects(Box2->getGlobalBounds())) //2
 	{
-		Mario->setPosition(Mario->getPosition().x, 815);
+		Mario->setPosition(Mario->getPosition().x, 835);
 	}
 
 	if (Mario->getGlobalBounds().intersects(Box3->getGlobalBounds())) //3
 	{
-		Mario->setPosition(Mario->getPosition().x, 805);
+		Mario->setPosition(Mario->getPosition().x, 825);
 	}
 
 	if (Mario->getGlobalBounds().intersects(Box4->getGlobalBounds())) //4
 	{
-		Mario->setPosition(Mario->getPosition().x, 795);
+		Mario->setPosition(Mario->getPosition().x, 815);
 	}
 
 	if (Mario->getGlobalBounds().intersects(Box5->getGlobalBounds())) //5
 	{
-		Mario->setPosition(Mario->getPosition().x, 685);
+		Mario->setPosition(Mario->getPosition().x, 705);
 	}
 
 	if (Mario->getGlobalBounds().intersects(Box6->getGlobalBounds())) //6
 	{
-		Mario->setPosition(Mario->getPosition().x, 695);
+		Mario->setPosition(Mario->getPosition().x, 715);
 	}
 
 	if (Mario->getGlobalBounds().intersects(Box7->getGlobalBounds()))  //7
 	{
-		Mario->setPosition(Mario->getPosition().x, 705);
+		Mario->setPosition(Mario->getPosition().x, 725);
 	}
 
 	if (Mario->getGlobalBounds().intersects(Box8->getGlobalBounds()))  //8
 	{
-		Mario->setPosition(Mario->getPosition().x, 715);
+		Mario->setPosition(Mario->getPosition().x, 735);
 	}
 
 	if (Mario->getGlobalBounds().intersects(Box9->getGlobalBounds())) //9
 	{
-		Mario->setPosition(Mario->getPosition().x, 605);
+		Mario->setPosition(Mario->getPosition().x, 625);
 	}
 
 	if (Mario->getGlobalBounds().intersects(Box10->getGlobalBounds()))  //10
 	{
-		Mario->setPosition(Mario->getPosition().x, 595);
+		Mario->setPosition(Mario->getPosition().x, 615);
 	}
 
 	if (Mario->getGlobalBounds().intersects(Box11->getGlobalBounds())) //11
 	{
-		Mario->setPosition(Mario->getPosition().x, 585);
+		Mario->setPosition(Mario->getPosition().x, 605);
 	}
 
 	if (Mario->getGlobalBounds().intersects(Box12->getGlobalBounds())) //12
 	{
-		Mario->setPosition(Mario->getPosition().x, 575);
+		Mario->setPosition(Mario->getPosition().x, 595);
 	}
 
 	if (Mario->getGlobalBounds().intersects(Box13->getGlobalBounds())) //13
 	{
-		Mario->setPosition(Mario->getPosition().x, 465);
+		Mario->setPosition(Mario->getPosition().x, 485);
 	}
 
 	if (Mario->getGlobalBounds().intersects(Box14->getGlobalBounds())) //14
 	{
-		Mario->setPosition(Mario->getPosition().x, 475);
+		Mario->setPosition(Mario->getPosition().x, 495);
 	}
 
 	if (Mario->getGlobalBounds().intersects(Box15->getGlobalBounds())) //15
 	{
-		Mario->setPosition(Mario->getPosition().x, 485);
+		Mario->setPosition(Mario->getPosition().x, 505);
 	}
 
 	if (Mario->getGlobalBounds().intersects(Box16->getGlobalBounds())) //16
 	{
-		Mario->setPosition(Mario->getPosition().x, 495);
+		Mario->setPosition(Mario->getPosition().x, 515);
 	}
 
 	if (Mario->getGlobalBounds().intersects(Box17->getGlobalBounds()))  //17
 	{
-		Mario->setPosition(Mario->getPosition().x, 385);
+		Mario->setPosition(Mario->getPosition().x, 405);
 	}
 
 	if (Mario->getGlobalBounds().intersects(Box18->getGlobalBounds()))  //18
 	{
-		Mario->setPosition(Mario->getPosition().x, 375);
+		Mario->setPosition(Mario->getPosition().x, 395);
 	}
 
 	if (Mario->getGlobalBounds().intersects(Box19->getGlobalBounds())) //19
 	{
-		Mario->setPosition(Mario->getPosition().x, 365);
+		Mario->setPosition(Mario->getPosition().x, 385);
 	}
 
 	if (Mario->getGlobalBounds().intersects(Box20->getGlobalBounds()))  //20
 	{
-		Mario->setPosition(Mario->getPosition().x, 355);
+		Mario->setPosition(Mario->getPosition().x, 375);
 	}
 	if (Mario->getGlobalBounds().intersects(Box21->getGlobalBounds())) //21
 	{
-		Mario->setPosition(Mario->getPosition().x, 250);
+		Mario->setPosition(Mario->getPosition().x, 270);
 	}
 
 	if (Mario->getGlobalBounds().intersects(Box22->getGlobalBounds())) //22
 	{
-		Mario->setPosition(Mario->getPosition().x, 255);
+		Mario->setPosition(Mario->getPosition().x, 275);
 	}
 
 	if (Mario->getGlobalBounds().intersects(Box23->getGlobalBounds())) //23
 	{
-		Mario->setPosition(Mario->getPosition().x, 265);
+		Mario->setPosition(Mario->getPosition().x, 285);
 	}
 
 	if (Mario->getGlobalBounds().intersects(Box24->getGlobalBounds())) //24
 	{
-		Mario->setPosition(Mario->getPosition().x, 275);
+		Mario->setPosition(Mario->getPosition().x, 295);
 	}
 
 	if (Mario->getGlobalBounds().intersects(Box25->getGlobalBounds())) //25
 	{
-		Mario->setPosition(Mario->getPosition().x, 155);
+		Mario->setPosition(Mario->getPosition().x, 175);
 	}
 
-	if (Barrel1->getGlobalBounds().intersects(Wall1->getGlobalBounds())) //Wall1
+	if (Mario->getGlobalBounds().intersects(Wall1->getGlobalBounds())) //Wall1
 	{
-		Barrel1->setPosition(Barrel1->getPosition().x + 100, (Barrel1->getPosition().y));
+		Mario->setPosition(Mario->getPosition().x + 100, (Mario->getPosition().y));
 	}
 
-	if (Barrel1->getGlobalBounds().intersects(Wall2->getGlobalBounds())) //Wall1
+	if (Mario->getGlobalBounds().intersects(Wall2->getGlobalBounds())) //Wall2
 	{
-		Barrel1->setPosition(Barrel1->getPosition().x - 100, (Barrel1->getPosition().y));
+		Mario->setPosition(Mario->getPosition().x - 100, (Mario->getPosition().y));
 	}
 
 	if (Barrel1->getGlobalBounds().intersects(Box1->getGlobalBounds())) //B1
 	{
-		Barrel1->setPosition(Barrel1->getPosition().x-3, 865);
+		Barrel1->setPosition(Barrel1->getPosition().x-3, 860);
 	}
 
 	if (Barrel1->getGlobalBounds().intersects(Box2->getGlobalBounds())) //2
 	{
-		Barrel1->setPosition(Barrel1->getPosition().x-3, 865);
+		Barrel1->setPosition(Barrel1->getPosition().x-3, 855);
 	}
 
 	if (Barrel1->getGlobalBounds().intersects(Box3->getGlobalBounds())) //3
 	{
-		Barrel1->setPosition(Barrel1->getPosition().x-3, 855);
+		Barrel1->setPosition(Barrel1->getPosition().x-3, 845);
 	}
 
 	if (Barrel1->getGlobalBounds().intersects(Box4->getGlobalBounds())) //4
 	{	
-		Barrel1->setPosition(Barrel1->getPosition().x-3, 845);
+		Barrel1->setPosition(Barrel1->getPosition().x-3, 835);
 	}	
 
 	if (Barrel1->getGlobalBounds().intersects(Box5->getGlobalBounds())) //5
 	{
-		Barrel1->setPosition(Barrel1->getPosition().x+3, 735);
+		Barrel1->setPosition(Barrel1->getPosition().x+6, 725);
 	}
 
 	if (Barrel1->getGlobalBounds().intersects(Box6->getGlobalBounds())) //6
 	{
-		Barrel1->setPosition(Barrel1->getPosition().x+3, 745);
+		Barrel1->setPosition(Barrel1->getPosition().x+6, 735);
 	}
 
 	if (Barrel1->getGlobalBounds().intersects(Box7->getGlobalBounds()))  //7
 	{
-		Barrel1->setPosition(Barrel1->getPosition().x+3, 755);
+		Barrel1->setPosition(Barrel1->getPosition().x+6, 745);
 	}
 
 	if (Barrel1->getGlobalBounds().intersects(Box8->getGlobalBounds()))  //8
 	{
-		Barrel1->setPosition(Barrel1->getPosition().x+3, 765);
+		Barrel1->setPosition(Barrel1->getPosition().x+6, 755);
 	}
 
 	if (Barrel1->getGlobalBounds().intersects(Box9->getGlobalBounds())) //9
 	{
-		Barrel1->setPosition(Barrel1->getPosition().x-3, 655);
+		Barrel1->setPosition(Barrel1->getPosition().x-9, 645);
 	}
 
 	if (Barrel1->getGlobalBounds().intersects(Box10->getGlobalBounds()))  //10
 	{
-		Barrel1->setPosition(Barrel1->getPosition().x-3, 645);
+		Barrel1->setPosition(Barrel1->getPosition().x-9, 635);
 	}
 
 	if (Barrel1->getGlobalBounds().intersects(Box11->getGlobalBounds())) //11
 	{
-		Barrel1->setPosition(Barrel1->getPosition().x-3, 635);
+		Barrel1->setPosition(Barrel1->getPosition().x-9, 625);
 	}
 
 	if (Barrel1->getGlobalBounds().intersects(Box12->getGlobalBounds())) //12
 	{
-		Barrel1->setPosition(Barrel1->getPosition().x-3, 625);
+		Barrel1->setPosition(Barrel1->getPosition().x-9, 615);
 	}
 
 	if (Barrel1->getGlobalBounds().intersects(Box13->getGlobalBounds())) //13
 	{	
-		Barrel1->setPosition(Barrel1->getPosition().x+3, 515);
+		Barrel1->setPosition(Barrel1->getPosition().x+12, 505);
 	}	
 	if (Barrel1->getGlobalBounds().intersects(Box14->getGlobalBounds())) //14
 	{	
-		Barrel1->setPosition(Barrel1->getPosition().x+3, 525);
+		Barrel1->setPosition(Barrel1->getPosition().x+12, 515);
 	}	
 		
 	if (Barrel1->getGlobalBounds().intersects(Box15->getGlobalBounds())) //15
 	{	
-		Barrel1->setPosition(Barrel1->getPosition().x+3, 535);
+		Barrel1->setPosition(Barrel1->getPosition().x+12, 525);
 	}	
 		
 	if (Barrel1->getGlobalBounds().intersects(Box16->getGlobalBounds())) //16
 	{	
-		Barrel1->setPosition(Barrel1->getPosition().x+3, 545);
+		Barrel1->setPosition(Barrel1->getPosition().x+12, 535);
 	}	
 		
 	if (Barrel1->getGlobalBounds().intersects(Box17->getGlobalBounds()))  //17
 	{
-		Barrel1->setPosition(Barrel1->getPosition().x-3, 435);
+		Barrel1->setPosition(Barrel1->getPosition().x-12, 425);
 	}
 
 	if (Barrel1->getGlobalBounds().intersects(Box18->getGlobalBounds()))  //18
 	{
-		Barrel1->setPosition(Barrel1->getPosition().x-3, 425);
+		Barrel1->setPosition(Barrel1->getPosition().x-12, 415);
 	}
 
 	if (Barrel1->getGlobalBounds().intersects(Box19->getGlobalBounds())) //19
 	{
-		Barrel1->setPosition(Barrel1->getPosition().x-3, 415);
+		Barrel1->setPosition(Barrel1->getPosition().x-12, 405);
 	}
 
 	if (Barrel1->getGlobalBounds().intersects(Box20->getGlobalBounds()))  //20
 	{
-		Barrel1->setPosition(Barrel1->getPosition().x-3, 405);
+		Barrel1->setPosition(Barrel1->getPosition().x-12, 395);
 	}
 	if (Barrel1->getGlobalBounds().intersects(Box21->getGlobalBounds())) //21
 	{
-		Barrel1->setPosition(Barrel1->getPosition().x+3, 310);
+		Barrel1->setPosition(Barrel1->getPosition().x+15, 290);
 	}
 
 	if (Barrel1->getGlobalBounds().intersects(Box22->getGlobalBounds())) //22
 	{
-		Barrel1->setPosition(Barrel1->getPosition().x+3, 315);
+		Barrel1->setPosition(Barrel1->getPosition().x+15, 295);
 	}
 
 	if (Barrel1->getGlobalBounds().intersects(Box23->getGlobalBounds())) //23
 	{
-		Barrel1->setPosition(Barrel1->getPosition().x+3, 325);
+		Barrel1->setPosition(Barrel1->getPosition().x+15, 305);
 	}
 
 	if (Barrel1->getGlobalBounds().intersects(Box24->getGlobalBounds())) //24
 	{
-		Barrel1->setPosition(Barrel1->getPosition().x+3, 340);
+		Barrel1->setPosition(Barrel1->getPosition().x+15, 315);
 	}
 
 	if (Barrel1->getGlobalBounds().intersects(Box25->getGlobalBounds())) //25
@@ -661,5 +662,10 @@ void juego::colliderProcess()
 	if (Barrel1->getGlobalBounds().intersects(OilDrum->getGlobalBounds())) //Delete
 	{
 		Barrel1->setPosition(Barrel1->getPosition().x, 310);
+	}
+
+	if (Mario->getGlobalBounds().intersects(Pauline1->getGlobalBounds()))
+	{
+		cout << "You win! " << endl;
 	}
 }
